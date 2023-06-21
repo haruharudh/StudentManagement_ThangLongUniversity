@@ -71,6 +71,7 @@ class SubjectSchema(Base):
     subjectName=Column(String(60))
     majorID=Column(String(6))
     subjectCredit=Column(Integer)
+    Coefficient=Column(Float)
 
 #Chương trình
 class CourseSchema(Base):
@@ -118,3 +119,13 @@ class GroupSchema(Base):
 class YearSchema(Base):
     __tablename__="year"
     yearID=Column(Integer, primary_key=True)
+
+class BillSchema(Base):
+    __tablename__="bill"
+    billID=Column(Integer,primary_key=True)
+    studentID=Column(String(6))
+    termID=Column(String(8))
+    subjectID=Column(String(10))
+    status=Column(Integer)
+    quantity=Column(Float)
+    cost=Column(Integer)

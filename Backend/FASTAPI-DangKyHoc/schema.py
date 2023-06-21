@@ -62,6 +62,7 @@ class SubjectSchema(BaseModel):
     subjectName=str
     majorID=str
     subjectCredit=int
+    Coefficient=float
 
 class CourseSchema(BaseModel):
     courseID=int
@@ -99,3 +100,12 @@ class GroupSchema(BaseModel):
 
 class YearSchema(BaseModel):
     yearID=int
+
+class BillSchema(BaseModel):
+    billID=int
+    studentID=str
+    termID=str
+    subjectID=str
+    status=int
+    quantity=float
+    cost=int
